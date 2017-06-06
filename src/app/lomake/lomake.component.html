@@ -1,0 +1,9 @@
+<form (submit)="laheta()">
+  <input type="text" name="nimi" placeholder="Oma nimi" [(ngModel)]="nimi">
+  <br>
+  <div *ngFor="let v of vaihtoehdot">
+    <input [id]="v" type="radio" name="supersankari" [value]="v" [(ngModel)]="supersankari">
+    <label [for]="v">{{v}}</label>
+  </div>
+  <input type="submit" value="Lähetä">
+</form>
